@@ -264,7 +264,7 @@
 				DEVELOPMENT_TEAM = S43L4C4K8B;
 				INFOPLIST_FILE = heartThem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.katyal.heartThem;
+				PRODUCT_BUNDLE_IDENTIFIER = katyal.pushmynotifs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -277,7 +277,7 @@
 				DEVELOPMENT_TEAM = S43L4C4K8B;
 				INFOPLIST_FILE = heartThem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.katyal.heartThem;
+				PRODUCT_BUNDLE_IDENTIFIER = katyal.pushmynotifs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
