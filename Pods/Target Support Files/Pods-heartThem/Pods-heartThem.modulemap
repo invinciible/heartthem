@@ -1,0 +1,6 @@
+framework module Pods_heartThem {
+  umbrella header "Pods-heartThem-umbrella.h"
+
+  export *
+  module * { export * }
+}
