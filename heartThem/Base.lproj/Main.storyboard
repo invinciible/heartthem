@@ -274,25 +274,22 @@
                                                                 <constraint firstAttribute="width" constant="40" id="l7J-Ze-rzd"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-Nl-FGN">
-                                                            <rect key="frame" x="10" y="367" width="80" height="21"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-Nl-FGN">
+                                                            <rect key="frame" x="10" y="367" width="72" height="36"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcV-DB-pWO" customClass="ShadowOnLabel" customModule="heartThem" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="36"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-te-Kl0" customClass="ShadowOnLabel" customModule="heartThem" customModuleProvider="target">
-                                                                    <rect key="frame" x="35" y="0.0" width="45" height="21"/>
+                                                                    <rect key="frame" x="37" y="0.0" width="35" height="36"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="80" id="pm7-Xa-lap"/>
-                                                            </constraints>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Ozx-xp-5pX" customClass="RoundImage" customModule="heartThem" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="5" width="40" height="40"/>
@@ -307,31 +304,31 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="hey party on the beach on friday and enjoyed alot" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pYl-Jx-aue">
-                                                            <rect key="frame" x="95" y="367" width="319" height="87"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=",i'm here to find you a bootle of love and ,i'm here to find you a bootle of love and " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="G5Y-gD-T7f">
+                                                            <rect key="frame" x="5" y="408" width="404" height="41"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="G5Y-gD-T7f" secondAttribute="trailing" constant="5" id="1ea-jZ-MMs"/>
                                                         <constraint firstAttribute="trailing" secondItem="23m-eo-emQ" secondAttribute="trailing" id="2mz-Bo-GJG"/>
                                                         <constraint firstItem="Ozx-xp-5pX" firstAttribute="leading" secondItem="Nds-m6-bZI" secondAttribute="leading" constant="10" id="5xZ-Ve-BGr"/>
                                                         <constraint firstItem="23m-eo-emQ" firstAttribute="leading" secondItem="Nds-m6-bZI" secondAttribute="leading" id="7B6-ym-Q80"/>
                                                         <constraint firstItem="23m-eo-emQ" firstAttribute="top" secondItem="U7t-VR-fYx" secondAttribute="bottom" constant="5" id="7uj-7f-TnB"/>
                                                         <constraint firstItem="UWO-Nl-FGN" firstAttribute="leading" secondItem="Nds-m6-bZI" secondAttribute="leading" constant="10" id="Ar8-Qy-AX4"/>
+                                                        <constraint firstItem="G5Y-gD-T7f" firstAttribute="top" secondItem="UWO-Nl-FGN" secondAttribute="bottom" constant="5" id="EVD-J6-4ha"/>
                                                         <constraint firstItem="Ozx-xp-5pX" firstAttribute="top" secondItem="Nds-m6-bZI" secondAttribute="top" constant="5" id="EXz-Ta-3oA"/>
-                                                        <constraint firstItem="pYl-Jx-aue" firstAttribute="top" secondItem="23m-eo-emQ" secondAttribute="bottom" constant="5" id="EfE-rL-092"/>
-                                                        <constraint firstAttribute="trailing" secondItem="pYl-Jx-aue" secondAttribute="trailing" id="FBO-7W-OsW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="G5Y-gD-T7f" secondAttribute="bottom" constant="5" id="Lht-wq-4tc"/>
                                                         <constraint firstItem="UWO-Nl-FGN" firstAttribute="top" secondItem="23m-eo-emQ" secondAttribute="bottom" constant="5" id="Nfz-Bm-19L"/>
                                                         <constraint firstAttribute="trailing" secondItem="U7t-VR-fYx" secondAttribute="trailing" constant="10" id="ifO-IF-HwN"/>
                                                         <constraint firstItem="U7t-VR-fYx" firstAttribute="top" secondItem="Nds-m6-bZI" secondAttribute="top" constant="5" id="jxF-36-eU4"/>
                                                         <constraint firstItem="Jhg-86-tJ1" firstAttribute="centerY" secondItem="Ozx-xp-5pX" secondAttribute="centerY" id="osN-Ka-nmu"/>
-                                                        <constraint firstItem="pYl-Jx-aue" firstAttribute="leading" secondItem="UWO-Nl-FGN" secondAttribute="trailing" constant="5" id="r5s-GE-hAY"/>
+                                                        <constraint firstItem="G5Y-gD-T7f" firstAttribute="leading" secondItem="Nds-m6-bZI" secondAttribute="leading" constant="5" id="pCm-gi-FP3"/>
                                                         <constraint firstItem="23m-eo-emQ" firstAttribute="top" secondItem="Ozx-xp-5pX" secondAttribute="bottom" constant="5" id="xHl-ap-sro"/>
                                                         <constraint firstItem="Jhg-86-tJ1" firstAttribute="leading" secondItem="Ozx-xp-5pX" secondAttribute="trailing" constant="8" id="z4m-sQ-PJT"/>
-                                                        <constraint firstAttribute="bottom" secondItem="pYl-Jx-aue" secondAttribute="bottom" id="zNX-nx-QwO"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
