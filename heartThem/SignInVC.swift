@@ -13,6 +13,10 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: FancyTextField!
+    
+    @IBOutlet weak var passwordTextField: FancyTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -55,5 +59,29 @@ class SignInVC: UIViewController {
             }
         }
     }
+    @IBAction func signInBtnTapped(_ sender: Any) {
+        
+        if let email = emailTextField.text , let pass = passwordTextField.text {
+            
+            Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                if error == nil {
+                    print("tush : successfully Sign in using firebase")
+                } else {
+                    
+                    Auth.auth().createUser(withEmail: email, password: pass, completion: { (user, error) in
+                        
+                        if error != nil {
+                            print("tush : authentication error")
+                        } else {
+                            print("tush : user created success on firebase")
+                        }
+                    })
+                }
+                
+            })
+        }
+        
+    }
+    
 }
 
