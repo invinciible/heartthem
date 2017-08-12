@@ -21,6 +21,7 @@
 		6FFE49E81F3EBDE30091F7C7 /* ShadowOnLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49E71F3EBDE30091F7C7 /* ShadowOnLabel.swift */; };
 		6FFE49EA1F3F093B0091F7C7 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49E91F3F093B0091F7C7 /* FeedVC.swift */; };
 		6FFE49EC1F3F26F30091F7C7 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49EB1F3F26F30091F7C7 /* RoundImage.swift */; };
+		6FFE49F01F3F5BFE0091F7C7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49EF1F3F5BFE0091F7C7 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6FFE49E71F3EBDE30091F7C7 /* ShadowOnLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowOnLabel.swift; sourceTree = "<group>"; };
 		6FFE49E91F3F093B0091F7C7 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		6FFE49EB1F3F26F30091F7C7 /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		6FFE49EF1F3F5BFE0091F7C7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		8BA5A94371651BC0D742EC10 /* Pods-heartThem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartThem.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartThem/Pods-heartThem.release.xcconfig"; sourceTree = "<group>"; };
 		F52FE4B59BFC75BFC047C031 /* Pods_heartThem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartThem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				6FFE49E51F3EB8200091F7C7 /* FancyTextField.swift */,
 				6FFE49E71F3EBDE30091F7C7 /* ShadowOnLabel.swift */,
 				6FFE49EB1F3F26F30091F7C7 /* RoundImage.swift */,
+				6FFE49EF1F3F5BFE0091F7C7 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				6FFE49E81F3EBDE30091F7C7 /* ShadowOnLabel.swift in Sources */,
 				6FFE49E21F3EB52D0091F7C7 /* FancyView.swift in Sources */,
 				6FFE49E01F3EB4E60091F7C7 /* constants.swift in Sources */,
+				6FFE49F01F3F5BFE0091F7C7 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
