@@ -19,6 +19,7 @@
 		6FFE49E41F3EB6470091F7C7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49E31F3EB6470091F7C7 /* RoundButton.swift */; };
 		6FFE49E61F3EB8200091F7C7 /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49E51F3EB8200091F7C7 /* FancyTextField.swift */; };
 		6FFE49E81F3EBDE30091F7C7 /* ShadowOnLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49E71F3EBDE30091F7C7 /* ShadowOnLabel.swift */; };
+		6FFE49EA1F3F093B0091F7C7 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE49E91F3F093B0091F7C7 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6FFE49E31F3EB6470091F7C7 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6FFE49E51F3EB8200091F7C7 /* FancyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
 		6FFE49E71F3EBDE30091F7C7 /* ShadowOnLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowOnLabel.swift; sourceTree = "<group>"; };
+		6FFE49E91F3F093B0091F7C7 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		8BA5A94371651BC0D742EC10 /* Pods-heartThem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartThem.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartThem/Pods-heartThem.release.xcconfig"; sourceTree = "<group>"; };
 		F52FE4B59BFC75BFC047C031 /* Pods_heartThem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartThem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6FFE49C91F3DBCE20091F7C7 /* SignInVC.swift */,
+				6FFE49E91F3F093B0091F7C7 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -265,6 +269,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +288,7 @@
 				6FFE49E41F3EB6470091F7C7 /* RoundButton.swift in Sources */,
 				6FFE49C81F3DBCE20091F7C7 /* AppDelegate.swift in Sources */,
 				6FFE49E61F3EB8200091F7C7 /* FancyTextField.swift in Sources */,
+				6FFE49EA1F3F093B0091F7C7 /* FeedVC.swift in Sources */,
 				6FFE49E81F3EBDE30091F7C7 /* ShadowOnLabel.swift in Sources */,
 				6FFE49E21F3EB52D0091F7C7 /* FancyView.swift in Sources */,
 				6FFE49E01F3EB4E60091F7C7 /* constants.swift in Sources */,

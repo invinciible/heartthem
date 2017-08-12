@@ -158,11 +158,50 @@
                     <connections>
                         <outlet property="emailTextField" destination="Iwx-QL-ivv" id="EZ0-hC-lwr"/>
                         <outlet property="passwordTextField" destination="PZD-Tn-Qru" id="d0q-A8-cBq"/>
+                        <segue destination="9mc-CQ-1SJ" kind="show" identifier="goToFeed" id="QeX-d2-yDZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="LkX-6v-wSe">
+            <objects>
+                <viewController id="9mc-CQ-1SJ" customClass="FeedVC" customModule="heartThem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yur-Ev-gf8"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0i-k4-hoO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iLA-Pj-ATx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zq-KR-3kg">
+                                <rect key="frame" x="134" y="60" width="146" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="CWG-vP-CUu"/>
+                                    <constraint firstAttribute="width" constant="146" id="cys-v1-Ns0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutBtnPressed:" destination="9mc-CQ-1SJ" eventType="touchUpInside" id="zjH-Jf-f0B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Zq-KR-3kg" firstAttribute="top" secondItem="yur-Ev-gf8" secondAttribute="bottom" constant="40" id="4oz-m4-CMz"/>
+                            <constraint firstItem="6Zq-KR-3kg" firstAttribute="centerX" secondItem="iLA-Pj-ATx" secondAttribute="centerX" id="hDZ-Bd-MOP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cby-pT-rOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998.55072463768124" y="-29.347826086956523"/>
         </scene>
     </scenes>
     <resources>
