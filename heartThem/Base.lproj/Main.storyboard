@@ -230,13 +230,17 @@
                                         </constraints>
                                         <state key="normal" image="add-post"/>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="AvH-QS-JbL" customClass="RoundImage" customModule="heartThem" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="AvH-QS-JbL" customClass="RoundImage" customModule="heartThem" customModuleProvider="target">
                                         <rect key="frame" x="5" y="15" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.71764705882352942" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="2WI-BR-XGc"/>
                                             <constraint firstAttribute="width" constant="40" id="vnG-9m-dqF"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="BnL-Xe-9Wo" appends="YES" id="Xx9-o8-j7K"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -369,10 +373,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImgThumb" destination="AvH-QS-JbL" id="YRi-4k-bdL"/>
                         <outlet property="tableView" destination="jxb-F5-Dr2" id="1Lq-hs-I3U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cby-pT-rOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BnL-Xe-9Wo">
+                    <connections>
+                        <action selector="addImgTapped:" destination="9mc-CQ-1SJ" id="h0B-Zr-re4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="998.55072463768124" y="-29.347826086956523"/>
         </scene>

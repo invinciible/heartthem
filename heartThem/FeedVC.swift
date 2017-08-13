@@ -9,9 +9,11 @@
 import UIKit
 import SwiftKeychainWrapper
 import Firebase
-class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
+class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
+    @IBOutlet weak var addImgThumb: RoundImage!
     @IBOutlet weak var tableView : UITableView!
+    var imagePicker : UIImagePickerController!
     
     var posts = [Posts]()
     override func viewDidLoad() {
@@ -19,6 +21,10 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
 
         tableView.dataSource = self
         tableView.delegate = self
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
         
         // setting up of observer , which will observe the live updates
         DataService.ds.REF_POSTS.observe(.value , with : { (snapshot) in
@@ -66,6 +72,18 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         return posts.count
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImgThumb.image = image
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addImgTapped(_ sender: Any) {
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     
     @IBAction func logOutBtnPressed(_ sender: Any) {
