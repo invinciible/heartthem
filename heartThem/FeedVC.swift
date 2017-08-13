@@ -13,6 +13,7 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView : UITableView!
     
+    var posts = [Posts]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,17 +21,33 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         tableView.delegate = self
         DataService.ds.REF_POSTS.observe(.value , with : { (snapshot) in
             
-            print(snapshot.value!)
-        
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
+                
+                for snap in snapshot {
+                    
+                    if let postDict = snap.value as? Dictionary<String,AnyObject> {
+                    
+                        let key = snap.key
+                        let post = Posts(postkey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                    
+                }
+            }
+        self.tableView.reloadData()
     })
 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let post = posts[indexPath.row]
+        print("Tush : \(post.caption)")
+        
         return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
     
