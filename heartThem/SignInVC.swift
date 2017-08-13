@@ -65,7 +65,9 @@ class SignInVC: UIViewController {
             } else {
                 print("tush : successfully authenticate with facebook")
                 if let user = user {
-                   self.signInComplete(id: user.uid)
+                    
+                    let userData = ["provider" : credential.provider]
+                   self.signInComplete(id: user.uid , userData: userData)
                 }
                 
             }
@@ -81,7 +83,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("tush : successfully Sign in using firebase")
                     if let user = user {
-                        self.signInComplete(id: user.uid)
+                        let userData = ["provider" : user.providerID]
+                        self.signInComplete(id: user.uid ,userData: userData)
                     }
                 } else {
                     
@@ -92,7 +95,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("tush : user created success on firebase")
                             if let user = user {
-                                self.signInComplete(id: user.uid)
+                                let userData = ["provider" : user.providerID]
+                                self.signInComplete(id: user.uid,userData: userData)
                             }
                         }
                     })
@@ -102,8 +106,9 @@ class SignInVC: UIViewController {
         }
         
     }
-    func signInComplete(id : String){
+    func signInComplete(id : String, userData : Dictionary<String,String>){
         
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
        let keychainResult = KeychainWrapper.standard.set(id,forKey :KEY_UID)
         print("tush :data saved success in keychain \(keychainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
