@@ -19,6 +19,8 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
 
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // setting up of observer , which will observe the live updates
         DataService.ds.REF_POSTS.observe(.value , with : { (snapshot) in
             
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
@@ -30,9 +32,12 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                         let key = snap.key
                         let post = Posts(postkey: key, postData: postDict)
                         self.posts.append(post)
+                        
+                    
                     }
                     
                 }
+                
             }
         self.tableView.reloadData()
     })
@@ -40,19 +45,25 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return posts.count
+       
+        return 1
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+       
         let post = posts[indexPath.row]
-        print("Tush : \(post.caption)")
-        
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            cell.configureCell(post: post)
+            return cell
+        }
+        else {
+            return PostCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     

@@ -18,10 +18,18 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var captionLbl: UILabel!
     @IBOutlet weak var noOfLikesLbl: ShadowOnLabel!
     
+    var post : Posts!
     override func awakeFromNib() {
         super.awakeFromNib()
        
     }
-
+    
+    func configureCell(post : Posts) {
+        
+        self.post = post
+        self.captionLbl.text = post.caption
+        self.noOfLikesLbl.text = "\(post.likes)"
+        
+    }
 
 }
