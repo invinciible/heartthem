@@ -26,6 +26,7 @@ class PostCell: UITableViewCell {
     
     func configureCell(post : Posts , img : UIImage?) {
         
+        print("tush : \(post.caption)")
         self.post = post
         self.captionLbl.text = post.caption
         self.noOfLikesLbl.text = "\(post.likes)"

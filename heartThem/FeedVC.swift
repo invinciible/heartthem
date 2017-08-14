@@ -33,6 +33,7 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
         // setting up of observer , which will observe the live updates
         DataService.ds.REF_POSTS.observe(.value , with : { (snapshot) in
             
+            print(snapshot.value!)
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
                 
                 for snap in snapshot {
@@ -130,13 +131,34 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
                     
                     print("Tush : image upload success")
                     
-                    let downloadURl = metaData?.downloadURL()?.absoluteString
+                    let downloadUrl = metaData?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                   self.postToFirebase(imgUrl:url)
                 }
                 
-                
+                }
             })
         }
         
+    }
+    
+    // Sending data to firebase
+    func postToFirebase(imgUrl : String) {
+        
+        let post : Dictionary<String, AnyObject> = [
+            "caption" : captionTextField.text! as AnyObject,
+            "imageurl" : imgUrl as AnyObject ,
+            "likes" : 0 as AnyObject
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionTextField.text = ""
+        selectedImg = false
+        addImgThumb.image = UIImage(named: "add-image")
+        tableView.reloadData()
+    
     }
     
     
