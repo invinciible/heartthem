@@ -38,10 +38,10 @@ class PostCell: UITableViewCell {
             ref.getData(maxSize : 2 * 1024 * 1024 , completion : { (data, error) in
                 
                 if error != nil {
-                    print("Tush : Unable to download image ")
+                   // print("Tush : Unable to download image ")
                 }
                 else {
-                    print("Tush : Image download success from firebase storage ")
+                    //print("Tush : Image download success from firebase storage ")
                     
                     if let imgData = data {
                         

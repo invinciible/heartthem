@@ -14,6 +14,8 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
     @IBOutlet weak var addImgThumb: RoundImage!
     @IBOutlet weak var tableView : UITableView!
     var imagePicker : UIImagePickerController!
+    var selectedImg = false
+    @IBOutlet weak var captionTextField: UITextField!
     
     static var imageCache : NSCache<NSString, UIImage> = NSCache()
     
@@ -63,6 +65,7 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             
+            // checking if there's a cache available pass that to cell
             if let img = FeedVC.imageCache.object(forKey: post.imageurl as NSString)
             {
                 
@@ -86,6 +89,7 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImgThumb.image = image
+            selectedImg = true
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -94,6 +98,47 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
         
         present(imagePicker, animated: true, completion: nil)
     }
+    @IBAction func addImgBtnTapped(_ sender: Any) {
+        
+        
+        guard let caption = captionTextField.text , caption != "" else {
+            
+            print("tush : Caption must be there")
+            return
+        }
+        
+        guard let img = addImgThumb.image , selectedImg == true else {
+            
+            print("Tush ; image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUID = NSUUID().uuidString
+            let metaData = StorageMetadata()
+            
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUID).putData(imgData, metadata: metaData, completion: { (metaData, error) in
+                
+                
+                if error != nil {
+                    
+                    print("Tush : Image upload failed")
+                } else {
+                    
+                    print("Tush : image upload success")
+                    
+                    let downloadURl = metaData?.downloadURL()?.absoluteString
+                }
+                
+                
+            })
+        }
+        
+    }
+    
     
     
     @IBAction func logOutBtnPressed(_ sender: Any) {

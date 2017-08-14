@@ -229,6 +229,9 @@
                                             <constraint firstAttribute="width" constant="30" id="hG3-Fd-xgO"/>
                                         </constraints>
                                         <state key="normal" image="add-post"/>
+                                        <connections>
+                                            <action selector="addImgBtnTapped:" destination="9mc-CQ-1SJ" eventType="touchUpInside" id="Dj0-S3-JKr"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="AvH-QS-JbL" customClass="RoundImage" customModule="heartThem" customModuleProvider="target">
                                         <rect key="frame" x="5" y="15" width="40" height="40"/>
@@ -263,7 +266,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="467"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vE1-70-mUm" id="00d-BL-ib0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="467"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="466.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nds-m6-bZI" customClass="FancyView" customModule="heartThem" customModuleProvider="target">
@@ -374,6 +377,7 @@
                     </view>
                     <connections>
                         <outlet property="addImgThumb" destination="AvH-QS-JbL" id="YRi-4k-bdL"/>
+                        <outlet property="captionTextField" destination="OA9-qo-nlx" id="MdA-FR-79L"/>
                         <outlet property="tableView" destination="jxb-F5-Dr2" id="1Lq-hs-I3U"/>
                     </connections>
                 </viewController>
