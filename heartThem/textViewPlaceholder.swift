@@ -10,9 +10,13 @@ import UIKit
 
 class textViewPlaceholder: UITextView {
 
-  
-    
-    
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        text = "Caption here"
+        textColor = UIColor.lightGray
+        
+
+    }
     
 }

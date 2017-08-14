@@ -15,7 +15,7 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
     @IBOutlet weak var tableView : UITableView!
     var imagePicker : UIImagePickerController!
     var selectedImg = false
-    @IBOutlet weak var captionTextField: UITextField!
+    @IBOutlet weak var captionTextField: UITextView!
     
     static var imageCache : NSCache<NSString, UIImage> = NSCache()
     
@@ -138,7 +138,6 @@ class FeedVC: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIIma
         }
         
     }
-    
     
     
     @IBAction func logOutBtnPressed(_ sender: Any) {
